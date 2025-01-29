@@ -29,3 +29,5 @@ Funcionalidades:
 https://github.com/user-attachments/assets/d37fc27b-e173-43a6-b3ca-0bcc201ea0e0
 
 ## 🌐 Acesse a página do projeto
+Hospedado no Pages do próprio GitHub
+https://kevinsoares345.github.io/Alura-Oracle-Challenge-Amigo-Secreto/
