@@ -30,7 +30,7 @@ function atualizarLista() {
     listaDeNomes.forEach(amigo => {
      let itemLista = document.createElement('li');
      itemLista.textContent = amigo; // Define o nome do amigo
-     lista.appendChild(itemLista); // Coloca o novo item na tela
+     lista.appendChild(itemLista); // Coloca o novo nome na tela
     });
 }
 
@@ -53,3 +53,9 @@ function sortearAmigo() {
 }
 
 // Função de reiniciar sorteio
+function sortearNovamente() {
+    listaDeNomes = []; // Esvazia a lista de amigos
+    lista.innerHTML = ""; // Limpa a lista exibida na tela
+    resultado.innerHTML = ""; // Limpa o resultado do sorteio
+    nomesInseridos.value = ""; // Limpa o campo de entrada
+}
