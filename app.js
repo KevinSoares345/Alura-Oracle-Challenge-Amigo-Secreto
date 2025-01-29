@@ -4,7 +4,7 @@ let lista = document.getElementById('listaAmigos');
 let nomesInseridos = document.getElementById('amigo');
 let resultado = document.getElementById('resultado');
 
-//função para checar se o campo está em branco ou nome repetido
+// Função para checar se o campo está em branco ou nome repetido
 function adicionarAmigo() {
     let amigos = nomesInseridos.value.trim();
     if (amigos == '') {
@@ -17,27 +17,29 @@ function adicionarAmigo() {
         return;
     }  
 
-    listaDeNomes.push(amigos); //puxa o nome do amigo para a lista
+    // Puxa o nome digitado para a lista
+    listaDeNomes.push(amigos);
     atualizarLista();
     nomesInseridos.value = '';
 }
 
-function atualizarLista() { // Inserir os nomes na lista
+// Função para adicionar os nomes na lista
+function atualizarLista() {
     lista.innerHTML = '';
 
     listaDeNomes.forEach(amigo => {
      let itemLista = document.createElement('li');
-     itemLista.textContent = amigo; //define o texto do item, que é o nome do amigo
-     lista.appendChild(itemLista); // adiciona o novo item á lista na tela
+     itemLista.textContent = amigo; // Define o nome do amigo
+     lista.appendChild(itemLista); // Coloca o novo item na tela
     });
 }
 
+// Função para interpretar o Enter como acionador do botão adicionar
 nomesInseridos.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
         adicionarAmigo();
     }
 });
-
 
 function sortearAmigo() {
     if (listaDeNomes.length == 0) {
@@ -49,3 +51,5 @@ function sortearAmigo() {
     resultado.innerHTML = `o amigo sorteado é: ${listaDeNomes[nomeSorteado]}`;
 
 }
+
+// Função de reiniciar sorteio

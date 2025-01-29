@@ -92,6 +92,12 @@ body {
     justify-content: center;
 }
 
+#sortear-novamente {
+    width: 300px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
 /* Estilos de entrada de texto */
 .input-title {
     flex: 1;
